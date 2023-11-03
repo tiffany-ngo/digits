@@ -31,7 +31,7 @@ const ListContacts = () => {
           <Col className="text-center">
             <h2>List Contacts</h2>
           </Col>
-          <Row>
+          <Row xs={1} md={2} lg={3} className="g-4">
             {contacts.map((contact) => (<Col key={contact._id}><Contact contact={contact} /></Col>))}
           </Row>
         </Col>
