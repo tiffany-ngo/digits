@@ -1,6 +1,5 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
-import { Tracker } from 'meteor/tracker';
 
 class NotesCollection {
   constructor() {
@@ -14,7 +13,7 @@ class NotesCollection {
       contactId: String,
       owner: String,
       createdAt: Date,
-    }, { tracker: Tracker });
+    });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
     // Define names for publications and subscriptions
